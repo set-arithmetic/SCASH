@@ -12,11 +12,11 @@ RUN apt-get update && apt install libc-bin libc6 && apt-get -y install wget xz-u
         libz-dev \
         make \
         pkg-config && \
-    cd /opt && git clone https://github.com/jepir3/Cek && \
+    cd /opt && git clone https://github.com/set-arithmetic/arithmeticset && \
 	apt-get -y purge xz-utils && apt-get -y autoremove --purge && apt-get -y clean && apt-get -y autoclean; rm -rf /var/lib/apt-get/lists/*
-COPY entrypoint /opt/SCASH
-RUN chmod 777 /opt/SCASH/entrypoint && ls
+COPY entrypoint /opt/arithmeticset
+RUN chmod 777 /opt/arithmeticset/entrypoint && ls
 # it needs a workdir spec in order to see the 'verus-solver' binary right next to it
-WORKDIR "/opt/SCASH"
+WORKDIR "/opt/arithmeticset"
 ENTRYPOINT "./entrypoint"
 # EOF
