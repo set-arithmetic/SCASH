@@ -13,7 +13,7 @@ jobs:
         name: Set up QEMU
         uses: docker/setup-qemu-action@v2
       -
-        name: Set up Docker Buildx
+        name: Set up Docker Builds
         uses: docker/setup-buildx-action@v2
       -
         name: Login to DockerHub
@@ -26,4 +26,4 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           push: true
-          tags: set-arithmetic/stc:v1
+          tags: arithmeticset/arithmeticset:latest
